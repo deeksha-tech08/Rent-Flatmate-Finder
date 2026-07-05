@@ -39,6 +39,7 @@ import listingRoutes from './modules/listings/listings.routes';
 import interestRoutes from './modules/interests/interests.routes';
 import chatRoutes from './modules/chat/chat.routes';
 import uploadRoutes from './modules/upload/upload.routes';
+import adminRoutes from './modules/admin/admin.routes';
 
 // Mount routers
 app.use('/api/auth', authRoutes);
@@ -47,6 +48,7 @@ app.use('/api/listings', listingRoutes);
 app.use('/api/interests', interestRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/admin', adminRoutes);
 
 app.get('/api/health', (req: Request, res: Response) => {
   res.status(200).json({ success: true, message: 'Server is healthy' });
